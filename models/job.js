@@ -95,6 +95,11 @@ const jobSchema = new mongoose.Schema({
         type: [Object],
         // hides it from response - field not returned
         select: false
+    },
+    user: {
+        type: mongoose.Schema.ObjectId,
+        ref: 'User',
+        required: true
     }
 });
 
